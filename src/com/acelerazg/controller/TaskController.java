@@ -18,7 +18,7 @@ public class TaskController {
 
     public static void addTask() {
         System.out.println("\n\u001B[32mVamos adicionar uma tarefa. Complete os dados abaixo:");
-        sc.nextLine();
+//        sc.nextLine();
 
         System.out.print("Nome da tarefa: ");
         String name = sc.nextLine();
@@ -38,7 +38,7 @@ public class TaskController {
         } catch (InputMismatchException e) {
             System.out.println("Entrada não Válida. Certifique-se de escrever umas das opções corretamente!");
         }
-        sc.nextLine();
+//        sc.nextLine();
 
         int option;
         CategoryModel category = null;
