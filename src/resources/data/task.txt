@@ -1,0 +1,6 @@
+JavaScript|Estudar JS na talent|15/03/2024|1|ESTUDOS|TODO
+Estudar Testes|Completar kit testes na talent|21/02/2024|2|ESTUDOS|TODO
+TypeScript|Estudar o kit na latent|20/02/2024|2|ESTUDOS|TODO
+Estudar Groovy|Completar kit na talent|14/02/2024|4|ESTUDOS|DOING
+Cinema|Ir ao cinema ao lado de casa|03/02/2024|5|LAZER|TODO
+JavaKit|Estudar o kit java|01/02/2024|5|TRABALHO|DONE
