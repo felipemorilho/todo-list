@@ -39,8 +39,10 @@ public class Main {
                 case 7:
                     TaskView.showStats();
                     break;
+                case 8:
+                    TaskController.deleteTask();
+                    break;
                 case 0:
-
                     System.out.println("\n---- Finalizando o app. Até a próxima!!! ----------");
                     System.exit(0);
                 default:
@@ -61,6 +63,7 @@ public class Main {
         System.out.println("5 - Filtrar tarefas por data;");
         System.out.println("6 - Filtrar tarefas por categoria;");
         System.out.println("7 - Mostrar estatísticas dos status das tarefas;");
+        System.out.println("8 - Deletar tarefas;");
         System.out.println("0 - Sair.");
         System.out.print("\nSelecione a opção desejada: ");
     }

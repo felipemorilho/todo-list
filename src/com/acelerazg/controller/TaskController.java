@@ -195,6 +195,22 @@ public class TaskController {
         System.out.println("\n\n\u001B[33mTarefa atualizada!");
     }
 
+    public static void deleteTask() {
+        taskList.forEach(task -> System.out.println("Nome da Tarefa: " + task.getName()));
+
+        System.out.print("\nInforme o nome da tarefa que deseja excluir: ");
+        String taskToDelete = sc.nextLine();
+
+        Task deleteTask = TaskView.findTaskByName(taskToDelete);
+
+        if (deleteTask != null) {
+            taskList.remove(deleteTask);
+            System.out.println("\nTarefa excluída com sucesso!!!");
+        } else {
+            System.out.println("Tarefa não encontrada!!!");
+        }
+    }
+
     public static Date parseDateInput(String inputDate) {
         try {
             return DATE_FORMAT.parse(inputDate);
