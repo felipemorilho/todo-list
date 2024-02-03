@@ -1,6 +1,6 @@
 package com.acelerazg.controller;
 
-import com.acelerazg.Task;
+import com.acelerazg.model.TaskModel;
 import com.acelerazg.View.TaskView;
 import com.acelerazg.enums.CategoryModel;
 import com.acelerazg.enums.StatusModel;
@@ -13,7 +13,7 @@ public class TaskController {
 
     private static final Scanner sc = new Scanner(System.in);
     private static final Scanner scNum = new Scanner(System.in);
-    public static ArrayList<Task> taskList = new ArrayList<>();
+    public static ArrayList<TaskModel> taskList = new ArrayList<>();
     public static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
 
     public static void addTask() {
@@ -99,7 +99,7 @@ public class TaskController {
         }
 
         if (name != null && description != null && finalDate != null && priority != 0 && category != null && status != null) {
-            Task newTask = new Task(name, description, finalDate, priority, category, status);
+            TaskModel newTask = new TaskModel(name, description, finalDate, priority, category, status);
             taskList.add(newTask);
             System.out.println("\n\n\u001B[33mTarefa foi adicionada com sucesso!!!!\n");
         } else {
@@ -113,7 +113,7 @@ public class TaskController {
         System.out.print("\n\n\u001B[32mAtualizar qual tarefa: ");
         String updateTask = sc.nextLine();
 
-        Task oldTask = TaskView.findTaskByName(updateTask);
+        TaskModel oldTask = TaskView.findTaskByName(updateTask);
         if(oldTask == null) {
             System.out.println("Tarefa inexistente!");
             return;
@@ -199,7 +199,7 @@ public class TaskController {
         System.out.print("\nInforme o nome da tarefa que deseja excluir: ");
         String taskToDelete = sc.nextLine();
 
-        Task deleteTask = TaskView.findTaskByName(taskToDelete);
+        TaskModel deleteTask = TaskView.findTaskByName(taskToDelete);
 
         if (deleteTask != null) {
             taskList.remove(deleteTask);

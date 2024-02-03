@@ -1,4 +1,4 @@
-package com.acelerazg;
+package com.acelerazg.model;
 
 import com.acelerazg.enums.CategoryModel;
 import com.acelerazg.enums.StatusModel;
@@ -6,7 +6,7 @@ import com.acelerazg.enums.StatusModel;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Task {
+public class TaskModel {
     private String name;
     private String description;
     private Date finalDate;
@@ -14,7 +14,7 @@ public class Task {
     private CategoryModel category;
     private StatusModel status;
 
-    public Task(String name, String description, Date finalDate, int priority, CategoryModel category, StatusModel status) {
+    public TaskModel(String name, String description, Date finalDate, int priority, CategoryModel category, StatusModel status) {
         this.name = name;
         this.description = description;
         this.finalDate = finalDate;

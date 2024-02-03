@@ -1,6 +1,6 @@
 package com.acelerazg.View;
 
-import com.acelerazg.Task;
+import com.acelerazg.model.TaskModel;
 import com.acelerazg.enums.StatusModel;
 
 import java.text.SimpleDateFormat;
@@ -12,7 +12,7 @@ import static com.acelerazg.controller.TaskController.taskList;
 public class TaskView {
 
 
-    public static Task findTaskByName(String taskName) {
+    public static TaskModel findTaskByName(String taskName) {
         return taskList.stream()
                 .filter(task -> task.getName().equalsIgnoreCase(taskName))
                 .findFirst()
@@ -21,19 +21,19 @@ public class TaskView {
 
     public static void listTaskByCategory() {
         System.out.println("\nListando as Tarefas por categoria: ");
-        taskList.sort(Comparator.comparing(Task::getCategory));
+        taskList.sort(Comparator.comparing(TaskModel::getCategory));
         taskList.forEach(System.out::println);
     }
 
     public static void listTaskByPriority() {
         System.out.println("\nListando tarefas por ordem de prioridade: ");
-        taskList.sort(Comparator.comparingInt(Task::getPriority).reversed());
+        taskList.sort(Comparator.comparingInt(TaskModel::getPriority).reversed());
         taskList.forEach(System.out::println);
     }
 
     public static void listTaskByStatus() {
         System.out.println("\nListando tarefas por status: ");
-        taskList.sort(Comparator.comparing(Task::getStatus));
+        taskList.sort(Comparator.comparing(TaskModel::getStatus));
         taskList.forEach(System.out::println);
     }
 
@@ -42,7 +42,7 @@ public class TaskView {
         Date currentDate = new Date();
         taskList.stream()
                 .filter(task -> task.getFinalDate().after(currentDate) || task.getFinalDate().equals(currentDate))
-                .sorted(Comparator.comparing(Task::getFinalDate))
+                .sorted(Comparator.comparing(TaskModel::getFinalDate))
                 .forEach(task -> {
                     SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
                     System.out.println("Tarefa: " + task.getName() + " | Data Limite: " + dateFormat.format(task.getFinalDate()));
