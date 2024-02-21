@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Todo-list - By Felipe Morilho</title>
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <h1 id="page-title">ToDo-List</h1>
+
+        <h2 id="page-subtitle">O controle de suas tarefas de forma simples!</h2>
+
+    </header>
+
+    <main>
+
+        <section id="option">
+
+            <p id="option-text">Selecione a opção desejada:</p>
+
+            <input type="button" class="button" id="addTask" value="Adicionar tarefa">
+            <input type="button" class="button" id="updateTask" value="Atualizar tarefa">
+            <input type="button" class="button" id="deleteTask" value="Deletar tarefa">
+            <input type="button" class="button" id="listTaskByPriority" value="Listar por Prioridade">
+            <input type="button" class="button" id="listTaskByStatus" value="Listar por Status">
+            <input type="button" class="button" id="listTaskByDate" value="Listar por Data">
+            <input type="button" class="button" id="listTaskByCategory" value="Listar por Categoria">
+            <input type="button" class="button" id="viewStatistic" value="Visualizar estatísticas">
+
+        </section>
+
+        <section id="task-list">
+
+            <p id="task-title">Tarefa:</p>
+
+            <label for="taskName">Nome da tarefa:</label>
+            <input type="text" id="taskName" name="taskName"><br><br>
+
+            <label for="taskDescription">Descrição da tarefa:</label>
+            <input type="text" id="taskDescription" name="taskDescription"><br><br>
+
+            <label for="taskFinalDate">Data limite:</label>
+            <input type="date" id="taskFinalDate" name="taskFinalDate"><br><br>
+
+            <div id="priority">
+
+                <p>Prioridade da tarefa:</p>
+
+                <input type="radio" id="priority1" name="priority" value="1">
+                <label for="1">1</label>
+                <input type="radio" id="priority2" name="priority" value="2">
+                <label for="2">2</label>
+                <input type="radio" id="priority3" name="priority" value="3">
+                <label for="3">3</label>
+                <input type="radio" id="priority4" name="priority" value="4">
+                <label for="4">4</label>
+                <input type="radio" id="priority5" name="priority" value="5">
+                <label for="5">5</label>
+
+            </div>
+
+            <div id="category">
+
+                <p>Selecione a categoria da tarefa:</p>
+
+                <input type="radio" id="category1" name="category" value="Casa">
+                <label for="casa">Casa</label>
+                <input type="radio" id="category2" name="category" value="Estudos">
+                <label for="estudos">Estudos</label>
+                <input type="radio" id="category3" name="category" value="Trabalho">
+                <label for="trabalho">Trabalho</label>
+                <input type="radio" id="category4" name="category" value="Lazer">
+                <label for="lazer">Lazer</label>
+
+            </div>
+
+            <div id="task-status">
+
+                <p>Selecione o status da tarefa:</p>
+
+                <input type="radio" id="status1" name="task-status" value="ToDo">
+                <label for="todo">ToDo</label>
+                <input type="radio" id="status2" name="task-status" value="Doing">
+                <label for="doing">Doing</label>
+                <input type="radio" id="status3" name="task-status" value="Done">
+                <label for="done">Done</label>
+
+            </div>
+
+            <input id="saveTask" type="submit" value="Salvar Tarefa">
+
+            <input id="confirmUpdate" type="submit" value="Atualizar Tarefa">
+
+        </section>
+
+        <section id="update-task">
+
+            <select id="selectTask" onchange="fillForm()">
+
+                <option value="0" selected>Escolha uma tarefa para editar:</option>
+
+            </select>
+
+        </section>
+
+        <section id="delete-task">
+
+            <p> Escolha acima qual tarefa exluir </p>
+
+            <input id="confirmDelete" type="submit" value="Deletar Tarefa">
+
+        </section>
+
+        <section id="show-task">
+
+            
+        </section>
+        
+        <input id="return" type="submit" value="Voltar">
+
+    </main>
+
+    <footer id="pageFooter">
+
+        <span id="current_year"> </span> &copy; Todos os direitos reservados
+
+    </footer>
+
+    <script type="text/javascript" src="todolist.js"></script>
+
+</body>
+
+</html>

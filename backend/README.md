@@ -10,3 +10,6 @@ Durante todo a interação, tenha sempre cuidado com os valores de entrada, para
 
 O código cria um arquivo txt para armazenar suas tarefas, então não se preocupe! Quando retornar, seus dados estarão seguros.
 
+Tecnologia utilziada:
+
+- Java
