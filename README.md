@@ -1,7 +1,7 @@
 
 # Felipe Morilho de Castro
 
-## Projeto ToDo-List 
+## App ToDo-List - Frontend 
 
 Neste repositório, encontra-se o backend e o frontend da aplicação.
 
