@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap');
+
+
+:root {
+    --cor-primaria: #649D36;
+    --cor-secundaria: #eeffc4;
+    --cor-terciaria: #3F3D56;
+
+    --fonte-titulo: "Libre Franklin", sans-serif;
+    --fonte-corpo: "Neuton", serif;
+
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: var(--cor-secundaria);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-family: var(--fonte-corpo);
+    font-size: 1.25rem;
+    padding-bottom: 20em;
+    height: 100vh;
+    margin: 0;
+}
+
+.header {
+    color: var(--cor-terciaria);
+   
+}
+
+#page-title {
+    font-family: var(--fonte-titulo);
+    text-align: center;
+    font-size: 2.25rem;
+    margin-top: 1em;
+}
+
+#page-subtitle {
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+#option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2em;
+    visibility: initial;
+}
+
+#option-text {
+    font-size: 1.5em;
+    font-style: bold;
+}
+
+.button {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    height: 3em;
+    width: 14em;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 16px;
+}
+
+#task-list {
+    gap: 20em;
+    padding-left: 4em;
+    margin-top: -38em;
+    color: #000000;
+    visibility: hidden;
+}
+
+#task-title {
+    font-size: 1.75rem;
+    color: var(--cor-primaria);
+    padding-bottom: 1em;
+}
+
+
+#priority, #category, #task-status {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1em;
+    gap: 0.5em;
+}
+
+#saveTask, #confirmUpdate {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    height: 3em;
+    width: 14em;
+    margin-top: 2em;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 16px;
+}
+
+#update-task {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: -23em;
+    margin-left: 1em;
+    visibility: hidden;
+}
+
+#selectTask {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0.5em 3em;
+    border-radius: 16px;
+    background-color: var(--cor-secundaria);
+    font-family: var(--fonte-corpo);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+#delete-task {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+    visibility: hidden;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+#confirmDelete {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    height: 3em;
+    width: 14em;
+    margin-top: 2em;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 16px;
+}
+
+#show-task {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    margin-top: -11em;
+    margin-left: 3em;
+    visibility: hidden;
+}
+
+#return {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    height: 3em;
+    width: 14em;
+    margin-left: 3em;
+    margin-top: 1em;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 16px;
+    visibility: hidden;
+}
+
+#pageFooter {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-secundaria);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    position: fixed;
+    bottom: 0;
+    height: 2.5em;
+    width: 100%;
+    visibility: hidden;
+}
